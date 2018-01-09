@@ -1,0 +1,40 @@
+<!-- Valakia Interactive Oy -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Karuselli</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        var imagePath = '';
+        var changeVariable = 0;
+
+        setInterval(oneSecondFunction, 5000);
+
+        function oneSecondFunction() {
+            if (changeVariable === 0) {
+                document.getElementById('screen').src =
+                    'aika.php';
+                changeVariable = 1;
+            } else {
+                document.getElementById('screen').src =
+                    'koonti.php';
+                changeVariable = 0;
+            }
+        }
+    </script>
+
+
+    <iframe id="screen" scrolling="no" src="koonti.php" height="252" width="168" style="border: none; overflow: hidden;"></iframe>
+</body>
+
+</html>
